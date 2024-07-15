@@ -9,6 +9,7 @@ function consultarDireccion() {
             return response.json();
         })
         .then(function(data) {
+            
             // Actualizar el contenido de los elementos existentes en el HTML
             document.getElementById('address').textContent = ":" + direccionBitcoin;
             document.getElementById('balance').textContent = + data.final_balance;
@@ -24,13 +25,15 @@ function consultarDireccion() {
                 transaccionesHTML += "</p>";
             }
             document.getElementById('ultimasTransacciones').innerHTML = transaccionesHTML;
+        
+            
         })
+    
         .catch(function(error) {
             console.error("Error al consultar la API:", error);
             document.getElementById("resultado").innerText = "Error al consultar la dirección.";
         });
-}
-
+    }
 window.onload = function() {
     var savedAddress = localStorage.getItem("direccionBitcoin");
     if (savedAddress) {

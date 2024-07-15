@@ -4,14 +4,4 @@
 <button onclick="calcularPorcentaje()">calcular</button>
 <div id="grafica"></div>
 
-<script>
-    function calcularPorcentaje() {
-        const metaInput = document.getElementById('meta');
-        const meta = parseFloat(metaInput.value);
-        const saldoActual = 0.00000001;
-        const diferencia = meta - saldoActual;
-        const porcentaje = (saldoActual/meta)*100;
-        const grafica = document.getElementById('grafica');
-        grafica.innerHTML = `Porcentaje hacia la meta: ${porcentaje.toFixed(2)}%`;
-    }
-</script>
+<script src="./explorer.js"></script>
