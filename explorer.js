@@ -9,6 +9,14 @@ function consultarDireccion() {
             return response.json();
         })
         .then(function(data) {
+            //Meta
+            var meta = parseFloat(document.getElementById("meta").value);
+            var saldoActual = parseFloat(data.final_balance);
+            var porcentajeFaltante = ((meta-saldoActual)/meta)*100;
+            document.getElementById("porcentajeFaltante").innerText = "Porcentaje Faltante " + porcentajeFaltante.toFixed(2) + "%";
+            
+            var barraProgreso = document.getElementById("barraProgreso");
+            barraProgreso.value = porcentajeFaltante;
             
             // Actualizar el contenido de los elementos existentes en el HTML
             document.getElementById('address').textContent = ":" + direccionBitcoin;

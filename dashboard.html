@@ -356,7 +356,28 @@
  <div class="components">
 
   <div class="chip">
-    <p>Coming Soon ...</p>
+    <h1>Porcentaje</h1>
+    <label for="direccionBitcoin">Direccion BTC:</label>
+    <input type="text" id="direccionBitcoin">
+    <button onclick="consultarDireccion()">Consultar</button>
+
+</div>
+<br>
+<div class="chip">
+  <label for="meta">Meta:</label>
+  <input type="number" id="meta">
+  <p id="porcentajeFaltante"></p>
+</div>
+<br>
+<div class="chip">
+  <progress id="barraProgreso" value="0" max="100"></progress>
+</div>
+<br>
+<div class="chip">
+  <h2>Informacion: </h2>
+        <p>Balance Actual:<span id="balance"></span></p>
+        <p>Numero de Transacciones: <span id="numTransacciones"></span></p>
+        <div id="ultimasTransacciones"></div>
 </div>
  </div>
 
@@ -383,7 +404,7 @@
   <script src='./popper.min.js'></script>
   <script  src="./script.js"></script>
   
-<script src="explorer.js" defer></script>
+<script src="./explorer.js"></script>
 <!--
   <script src="btc-api.js"></script>
   -->

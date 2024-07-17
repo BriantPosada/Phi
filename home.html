@@ -243,13 +243,29 @@
               </ul>
             </nav>
           </div>
+<div class="footer-box">
+  <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
+              <input type="text" id="direccionBitcoin" placeholder="Ingresa la direccion">
+              <button id="save" onclick="consultarDireccion()">Guardar</button>
+      <br>
+              <div style="padding: 0 10px">
+                <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
+             <!-- Selector de idioma -->
+              <select id="selector-idioma" onchange="cambiarIdioma()">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="jp">日本語</option>
+            </select>
+</div>
           <div class="sidebar-footer">
             <div class="footer-box">
+
               <div>
-                <!--
+                
                 <img
                   class="react-logo"
-                  src="https://user-images.githubusercontent.com/25878302/213938106-ca8f0485-3f30-4861-9188-2920ed7ab284.png"
+                  src="./assets/ikigai.jpg"
                   alt="react"
                 />
                 
@@ -257,38 +273,15 @@
             
               <div style="padding: 0 10px">
                 <span style="display: block; margin-bottom: 10px"
-                  >Pro sidebar is also available as a react package
-                </span>
-                <div style="margin-bottom: 15px">
-                  <img
-                    alt="preview badge"
-                    src="https://img.shields.io/github/stars/azouaoui-med/react-pro-sidebar?style=social"
-                  />
-                </div>
-              
-                <div>
-                  <a href="https://github.com/azouaoui-med/react-pro-sidebar" target="_blank"
-                    >Check it out!</a
-                  >
-                </div>
+                  >Donate</span>
+
               </div>
             </div>
           </div>
+
         </div>
-        --->
-        <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
-        <input type="text" id="direccionBitcoin" placeholder="Ingresa la direccion">
-        <button id="save" onclick="consultarDireccion()">Guardar</button>
-<br>
-        <div style="padding: 0 10px">
-          <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
-       <!-- Selector de idioma -->
-        <select id="selector-idioma" onchange="cambiarIdioma()">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="jp">日本語</option>
-      </select>
+      
+        
    
     </div>
       </aside>
