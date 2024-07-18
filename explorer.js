@@ -9,19 +9,11 @@ function consultarDireccion() {
             return response.json();
         })
         .then(function(data) {
-            //Meta
-            var meta = parseFloat(document.getElementById("meta").value);
-            var saldoActual = parseFloat(data.final_balance);
-            var porcentajeFaltante = ((meta-saldoActual)/meta)*100;
-            document.getElementById("porcentajeFaltante").innerText = "Porcentaje Faltante " + porcentajeFaltante.toFixed(2) + "%";
-            
-            var barraProgreso = document.getElementById("barraProgreso");
-            barraProgreso.value = porcentajeFaltante;
             
             // Actualizar el contenido de los elementos existentes en el HTML
             document.getElementById('address').textContent = ":" + direccionBitcoin;
-            document.getElementById('balance').textContent = + data.final_balance;
-            document.getElementById('numTransacciones').innerText = + data.n_tx;
+            document.getElementById('balance').textContent = data.final_balance;
+            document.getElementById('numTransacciones').innerText = data.n_tx;
 
             // Actualizar las últimas 5 transacciones
             var transaccionesHTML = "";
@@ -33,27 +25,21 @@ function consultarDireccion() {
                 transaccionesHTML += "</p>";
             }
             document.getElementById('ultimasTransacciones').innerHTML = transaccionesHTML;
-        
-            
         })
-    
         .catch(function(error) {
             console.error("Error al consultar la API:", error);
             document.getElementById("resultado").innerText = "Error al consultar la dirección.";
         });
-    }
+}
+
 window.onload = function() {
     var savedAddress = localStorage.getItem("direccionBitcoin");
     if (savedAddress) {
         document.getElementById("direccionBitcoin").value = savedAddress;
         consultarDireccion();
     }
-    
 
-      var contenedor = document.getElementById('contenedor_carga');
-      contenedor.style.visibility = 'hidden';
-      contenedor.style.opacity = '0';
-    
-    
-
+    var contenedor = document.getElementById('contenedor_carga');
+    contenedor.style.visibility = 'hidden';
+    contenedor.style.opacity = '0';
 };

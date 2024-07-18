@@ -177,9 +177,24 @@
   }
 
  #barraProgreso {
-  width: 100%;
-  height: 20px;
+  width: 90%;
+  height: 30px;
   margin-top: 10px;
+  
  }
 
- 
+ #barraProgreso::-webkit-meter-bar {
+  background: #ff8100; /* Color de fondo del medidor */
+}
+
+#barraProgreso::-webkit-meter-optimum-value {
+  background: #0c1e35; /* Color del valor óptimo */
+}
+
+#barraProgreso::-webkit-meter-suboptimum-value {
+  background: #fff; /* Color del valor subóptimo */
+}
+
+#barraProgreso::-webkit-meter-even-less-good-value {
+  background: #fff; /* Color del valor menos bueno */
+}

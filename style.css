@@ -1,7 +1,9 @@
+/*
 :root {
   --scheme: light dark;
   color-scheme: var(--scheme);
 }
+*/
 @font-face {
   font-family: san francisco;
   src: url('./assets/SFProText-Light.ttf')

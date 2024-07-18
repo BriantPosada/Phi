@@ -354,24 +354,27 @@
  fin contenido--->
 
  <div class="components">
-
+<!---
   <div class="chip">
     <h1>Porcentaje</h1>
     <label for="direccionBitcoin">Direccion BTC:</label>
-    <input type="text" id="direccionBitcoin">
+    <input type="text" id="direccionBitcoin" placeholder="">
     <button onclick="consultarDireccion()">Consultar</button>
 
 </div>
-<br>
+<br> 
+--->
 <div class="chip">
   <label for="meta">Meta:</label>
   <input type="number" id="meta">
-  <p id="porcentajeFaltante"></p>
+  
 </div>
 <br>
 <div class="chip">
-  <progress id="barraProgreso" value="0" max="100"></progress>
+  <p id="porcentajeFaltante"></p>
+  <meter id="barraProgreso" value="0" max="100">:-------</meter>
 </div>
+<!--
 <br>
 <div class="chip">
   <h2>Informacion: </h2>
@@ -379,6 +382,7 @@
         <p>Numero de Transacciones: <span id="numTransacciones"></span></p>
         <div id="ultimasTransacciones"></div>
 </div>
+--->
  </div>
 
           <footer class="footer">
@@ -401,10 +405,9 @@
       </div>
     </div>
 <!-- partial -->
-  <script src='./popper.min.js'></script>
   <script  src="./script.js"></script>
   
-<script src="./explorer.js"></script>
+<script src="./meta.js"></script>
 <!--
   <script src="btc-api.js"></script>
   -->
