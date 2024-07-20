@@ -1,3 +1,4 @@
+// Función para consultar la dirección Bitcoin
 function consultarDireccion() {
     var direccionBitcoinElement = document.getElementById("direccionBitcoin");
     if (!direccionBitcoinElement) {
@@ -21,7 +22,7 @@ function consultarDireccion() {
                 return;
             }
             var meta = parseFloat(metaElement.value);
-            localStorage.setItem("meta",meta);
+            localStorage.setItem("meta", meta);
             var saldoActual = parseFloat(data.final_balance);
             var porcentajeFaltante = ((meta - saldoActual) / meta) * 100;
 
@@ -55,6 +56,19 @@ function consultarDireccion() {
         });
 }
 
+// Función para guardar la fecha en el localStorage
+function guardarFecha() {
+    const fecha = document.getElementById('fecha').value;
+    localStorage.setItem('fechaSeleccionada', fecha);
+    alert('Fecha guardada: ' + fecha);
+    mostrarFecha(fecha);
+}
+function mostrarFecha(fecha) {
+    const fechaTextoElement = document.getElementById('fechaTexto');
+    fechaTextoElement.innerText = '' + fecha;
+}
+
+// Al cargar la página, recuperar la dirección Bitcoin, meta y fecha almacenadas (si existen)
 window.onload = function() {
     var savedAddress = localStorage.getItem("direccionBitcoin");
     if (savedAddress) {
@@ -62,12 +76,20 @@ window.onload = function() {
         consultarDireccion();
     }
 
-var savedMeta = localStorage.getItem("meta");
-if (savedMeta) {
-    document.getElementById("meta").value = savedMeta;
-}
+    var savedMeta = localStorage.getItem("meta");
+    if (savedMeta) {
+        document.getElementById("meta").value = savedMeta;
+    }
 
+    const fechaGuardada = localStorage.getItem('fechaSeleccionada');
+    if (fechaGuardada) {
+        document.getElementById('fecha').value = fechaGuardada;
+        mostrarFecha(fechaGuardada);
+    }
+
+    
     var contenedor = document.getElementById('contenedor_carga');
     contenedor.style.visibility = 'hidden';
     contenedor.style.opacity = '0';
+    
 };

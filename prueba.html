@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" href="neuro-css.css">
+       <link rel="stylesheet"   href="neuro-css.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Calculadora</title>
     </head>
     <body>
         
-
         <h1>Porcentaje</h1>
         <label for="direccionBitcoin">Direccion BTC:</label>
         <input type="text" id="direccionBitcoin">
@@ -17,16 +16,17 @@
         
         <label for="meta">Meta:</label>
         <input type="number" id="meta">
+        
         <p id="porcentajeFaltante"></p>
 
         <progress id="barraProgreso" value="0" max="100"></progress>
 
-        <h2>Informacion: </h2>
-        <p>Balance Actual:<span id="balance"></span></p>
-        <p>Numero de Transacciones: <span id="numTransacciones"></span></p>
-        <div id="ultimasTransacciones"></div>
-
-    </body>
+        <h2>Fecha: </h2>
+        <p id="fechaTexto"></p>
+        <input type="date" id="fecha">
+        <button onclick="guardarFecha()">Guardar Fecha</button>
+        
+        
 </html>
 
-<script src="./explorer.js"></script>
+<script src="./meta.js"></script>

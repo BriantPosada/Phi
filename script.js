@@ -287,7 +287,8 @@ function actualizarContenido(idioma) {
             head: "Información de la dirección",
             balance: "Error al consultar la dirección.",
             transacciones: "Numero de transacciones:",
-            last: "Ultimas 5 Transacciones"
+            last: "Ultimas 5 Transacciones",
+            meta: "Meta (Satoshis)"
         },
         en: {
             home: "Home",
@@ -301,7 +302,8 @@ function actualizarContenido(idioma) {
             head: "Management Information:",
             balancep: "Balance:",
             transacciones: "Number of Transactions:",
-            last: "Last 5 Transactions:"
+            last: "Last 5 Transactions:",
+            meta: "Goal (Satoshis)"
         },
         fr: {
             home: "Debut",
@@ -315,7 +317,8 @@ function actualizarContenido(idioma) {
             head: "Informations de gestion :",
             balancep: "Balance:",
             transacciones: "Nombre de transactions:",
-            last: "5 dernières transactions"
+            last: "5 dernières transactions",
+            meta: "Objectif"
         },
         jp: {
           home: "始める",
@@ -328,7 +331,8 @@ function actualizarContenido(idioma) {
           head: "管理情報",
           balancep: "秤：",
           transacciones: "トランザクション数:",
-          last: "最後の 5 トランザクション"
+          last: "最後の 5 トランザクション",
+          meta: "目標 (Satoshis)"
         }
         // Añade más idiomas y traducciones aquí
     };
@@ -344,7 +348,8 @@ function actualizarContenido(idioma) {
     document.getElementById('head').textContent = textos[idioma].head;
     document.getElementById('balancep').textContent = textos[idioma].balancep;
     document.getElementById('transacciones').textContent = textos[idioma].transacciones;
-    document.getElementById('last').textContent = textos[idioma].last
+    document.getElementById('last').textContent = textos[idioma].last;
+    document.getElementById('meta').textContent = textos[idioma].meta
 }
 
 // Al cargar la página, verificar si hay una selección de idioma guardada

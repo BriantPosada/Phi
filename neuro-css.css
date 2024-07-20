@@ -114,7 +114,7 @@
 }
 
 #contenedor_carga {
-  filter: blur(3px);
+  filter: blur(100px);
   background-color: rgba(250, 240, 245, 0.9);
   height: 100%;
   width: 100%;
