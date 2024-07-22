@@ -68,6 +68,16 @@ function mostrarFecha(fecha) {
     fechaTextoElement.innerText = '' + fecha;
 }
 
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var toggleArea = document.getElementById('toggleArea');
+    if (toggleArea.classList.contains('hidden')) {
+        toggleArea.classList.remove('hidden');
+    } else {
+        toggleArea.classList.add('hidden');
+    }
+});
+
+
 // Al cargar la página, recuperar la dirección Bitcoin, meta y fecha almacenadas (si existen)
 window.onload = function() {
     var savedAddress = localStorage.getItem("direccionBitcoin");

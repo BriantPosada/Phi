@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <link rel='stylesheet' href='./assets/RemixIcon_Fonts_v4.2.0/fonts/remixicon.css'>
        <link rel="stylesheet"   href="neuro-css.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -23,9 +24,11 @@
 
         <h2>Fecha: </h2>
         <p id="fechaTexto"></p>
+        <span  id="toggleButton" class="menu-icon"><i class="ri-arrow-down-wide-line"></i></span>
+    <div id="toggleArea" class="hidden">
         <input type="date" id="fecha">
         <button onclick="guardarFecha()">Guardar Fecha</button>
-        
+    </div>
         
 </html>
 

@@ -198,3 +198,7 @@
 #barraProgreso::-webkit-meter-even-less-good-value {
   background: #fff; /* Color del valor menos bueno */
 }
+
+.hidden {
+  display: none;
+}

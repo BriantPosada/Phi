@@ -10,9 +10,11 @@
 
 </head>
 <body>
+  <!--
   <div id="contenedor_carga">
     <div id="carga"></div>
   </div>
+-->
 <!-- partial:index.partial.html -->
 <div class="layout has-sidebar fixed-sidebar fixed-header">
       <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
@@ -365,9 +367,12 @@
 <br> 
 --->
 <div class="chip">
+<span  id="toggleButton" class="menu-icon"><i class="ri-arrow-down-wide-line"></i></span>
+    <div id="toggleArea" class="hidden">
   <p id="meta">Meta (Satoshis):</p>
-  <input type="number" id="meta">
-  
+  <input type="number" id="meta" placeholder="Meta">
+  <button onclick="consultarDireccion()">Actualizar Meta</button>
+</div>
 </div>
 <br>
 <div class="chip">
