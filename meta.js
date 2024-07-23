@@ -1,4 +1,3 @@
-// Función para consultar la dirección Bitcoin
 function consultarDireccion() {
     var direccionBitcoinElement = document.getElementById("direccionBitcoin");
     if (!direccionBitcoinElement) {
@@ -16,9 +15,9 @@ function consultarDireccion() {
         })
         .then(function(data) {
             // Meta
-            var metaElement = document.getElementById("meta");
+            var metaElement = document.getElementById("metaInput");
             if (!metaElement) {
-                console.error("Elemento con ID 'meta' no encontrado.");
+                console.error("Elemento con ID 'metaInput' no encontrado.");
                 return;
             }
             var meta = parseFloat(metaElement.value);
@@ -54,50 +53,59 @@ function consultarDireccion() {
                 resultadoElement.innerText = "Error al consultar la dirección.";
             }
         });
-}
+  }
 
-// Función para guardar la fecha en el localStorage
-function guardarFecha() {
-    const fecha = document.getElementById('fecha').value;
-    localStorage.setItem('fechaSeleccionada', fecha);
-    alert('Fecha guardada: ' + fecha);
-    mostrarFecha(fecha);
-}
-function mostrarFecha(fecha) {
-    const fechaTextoElement = document.getElementById('fechaTexto');
-    fechaTextoElement.innerText = '' + fecha;
-}
+  // Función para guardar la fecha en el localStorage
+  function guardarFecha() {
+      const fecha = document.getElementById('fecha').value;
+      localStorage.setItem('fechaSeleccionada', fecha);
+      alert('Fecha guardada: ' + fecha);
+      mostrarFecha(fecha);
+  }
 
-document.getElementById('toggleButton').addEventListener('click', function() {
-    var toggleArea = document.getElementById('toggleArea');
-    if (toggleArea.classList.contains('hidden')) {
-        toggleArea.classList.remove('hidden');
-    } else {
-        toggleArea.classList.add('hidden');
-    }
+  function mostrarFecha(fecha) {
+      const fechaTextoElement = document.getElementById('fechaTexto');
+      fechaTextoElement.innerText = '' + fecha;
+  }
+/*
+  document.getElementById('toggleButton').addEventListener('click', function() {
+      var toggleArea = document.getElementById('toggleArea');
+      if (toggleArea.classList.contains('hidden')) {
+          toggleArea.classList.remove('hidden');
+      } else {
+          toggleArea.classList.add('hidden');
+      }
+  });
+*/
+
+document.getElementById('openPopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'flex';
+});
+
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
 });
 
 
-// Al cargar la página, recuperar la dirección Bitcoin, meta y fecha almacenadas (si existen)
-window.onload = function() {
-    var savedAddress = localStorage.getItem("direccionBitcoin");
-    if (savedAddress) {
-        document.getElementById("direccionBitcoin").value = savedAddress;
-        consultarDireccion();
-    }
+  // Al cargar la página, recuperar la dirección Bitcoin, meta y fecha almacenadas (si existen)
+  window.onload = function() {
+      var savedAddress = localStorage.getItem("direccionBitcoin");
+      if (savedAddress) {
+          document.getElementById("direccionBitcoin").value = savedAddress;
+          consultarDireccion();
+      }
 
-    var savedMeta = localStorage.getItem("meta");
-    if (savedMeta) {
-        document.getElementById("meta").value = savedMeta;
-    }
+      var savedMeta = localStorage.getItem("meta");
+      if (savedMeta) {
+          document.getElementById("metaInput").value = savedMeta;
+      }
 
-    const fechaGuardada = localStorage.getItem('fechaSeleccionada');
-    if (fechaGuardada) {
-        document.getElementById('fecha').value = fechaGuardada;
-        mostrarFecha(fechaGuardada);
-    }
-
-    
+      const fechaGuardada = localStorage.getItem('fechaSeleccionada');
+      if (fechaGuardada) {
+          document.getElementById('fecha').value = fechaGuardada;
+          mostrarFecha(fechaGuardada);
+      }
+  
     var contenedor = document.getElementById('contenedor_carga');
     contenedor.style.visibility = 'hidden';
     contenedor.style.opacity = '0';

@@ -233,8 +233,9 @@
                     <span class="menu-title" id="edit">Edit</span>
                   </a>
                 </li>
+                
                 <li class="menu-item">
-                  <a href="#">
+                  <a href="configuration.html">
                     <span class="menu-icon">
                       <i class="ri-add-box-fill"></i>
                     </span>
@@ -277,13 +278,14 @@
           </div>
         </div>
         --->
+      <!---
         <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
         <input type="text" id="direccionBitcoin" placeholder="">
         <button id="save" onclick="consultarDireccion()">Guardar</button>
 <br>
         <div style="padding: 0 10px">
           <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
-       <!-- Selector de idioma -->
+       -- Selector de idioma --
         <select id="selector-idioma" onchange="cambiarIdioma()">
           <option value="en">English</option>
           <option value="es">Español</option>
@@ -292,6 +294,7 @@
       </select>
    
     </div>
+  -->
       </aside>
       <div id="overlay" class="overlay"></div>
       <div class="layout">
@@ -366,16 +369,71 @@
 </div>
 <br> 
 --->
-<div class="chip">
+<!---
 <span  id="toggleButton" class="menu-icon"><i class="ri-arrow-down-wide-line"></i></span>
     <div id="toggleArea" class="hidden">
   <p id="meta">Meta (Satoshis):</p>
-  <input type="number" id="meta" placeholder="Meta">
+  --->
+  <!--Pop-Ups-->
+  
+    <button id="openPopup">Configuration</button>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span id="closePopup" class="close">&times;</span>
+            <h1 class="config">Configuration</h1>
+           
+            <br>
+            <hr class="dotted">
+            <div class="chip">
+
+              <input type="number" id="metaInput" placeholder="">
+
   <button onclick="consultarDireccion()">Actualizar Meta</button>
-</div>
-</div>
-<br>
+            </div>
+            <br>
+            
+    <hr class="dotted">
+    <div class="chip">
+        
+        <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
+        
+        <input type="text" id="direccionBitcoin" class="barra" placeholder="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">
+        <button id="save" onclick="consultarDireccion()">Guardar</button>
+    
+      </div>
+      <br>
+      <hr class="dotted">
+      
+      <div class="chip">
+        <div style="padding: 0 10px">
+            <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
+         <!-- Selector de idioma -->
+          <select id="selector-idioma" onchange="cambiarIdioma()">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="jp">日本語</option>
+        </select>
+     
+      </div>
+      </div>
+      <br>
+      <hr class="dotted">
+      <div class="chip">
+
+        <h2>Fecha: </h2>
+        <p id="fechaTexto"></p>
+      
+        <input type="date" id="fecha">
+        <button onclick="guardarFecha()">Guardar Fecha</button>
+      </div>
+        </div>
+    </div>
+
 <div class="chip">
+
+  <p id="metaTexto">Meta (Satoshis):</p>
   <p id="porcentajeFaltante"></p>
   <meter id="barraProgreso" value="0" max="100"></meter>
 </div>

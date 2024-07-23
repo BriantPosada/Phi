@@ -1,6 +1,6 @@
 {
   "name": "Phi",
-  "version": "0.0.1",
+  "version": "0.0.1-Beta",
   "description": "DCA Desktop App",
   "main": "main.js",
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "dpkg": "^1.0.0",
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-util": "^0.18.1"
   }
 }
