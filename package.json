@@ -1,9 +1,9 @@
 {
   "name": "Phi",
-  "version": "0.0.1-Beta",
+  "version": "0.0.2-Beta",
   "description": "DCA Desktop App",
   "main": "main.js",
-  "scripts": {
+   "scripts": {
     "dev": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",

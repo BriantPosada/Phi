@@ -230,7 +230,7 @@
                     <span class="menu-icon">
                       <i class="ri-dashboard-horizontal-fill"></i>
                     </span>
-                    <span class="menu-title" id="edit">Edit</span>
+                    <span class="menu-title" id="dash">Dashboard</span>
                   </a>
                 </li>
                 
@@ -278,23 +278,65 @@
           </div>
         </div>
         --->
-      <!---
-        <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
-        <input type="text" id="direccionBitcoin" placeholder="">
-        <button id="save" onclick="consultarDireccion()">Guardar</button>
-<br>
-        <div style="padding: 0 10px">
-          <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
-       -- Selector de idioma --
-        <select id="selector-idioma" onchange="cambiarIdioma()">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="jp">日本語</option>
-      </select>
-   
-    </div>
-  -->
+        
+        <!--Pop-Ups-->
+  
+        <button id="openPopup" class="button"><i class="ri-settings-3-fill"></i></button>
+    
+        <div id="popup" class="popup">
+            <div class="popup-content">
+              <span id="closePopup" class="close">&times;</span>
+                <h1 class="config">Configuration</h1>
+               
+                <br>
+                <hr class="dotted">
+                <div class="chip">
+    
+                  <input type="number" id="metaInput" class="barra">
+    
+      <button onclick="consultarDireccion()" class="button">Actualizar Meta</button>
+                </div>
+                <br>
+                
+        <hr class="dotted">
+        <div class="chip">
+            
+            <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
+            
+            <input type="text" id="direccionBitcoin" class="barra" placeholder="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">
+            <button id="save" onclick="consultarDireccion()" class="button">Guardar</button>
+        
+          </div>
+          <br>
+          <hr class="dotted">
+          
+          <div class="chip">
+            <div style="padding: 0 10px">
+                <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
+             <!-- Selector de idioma -->
+              <select id="selector-idioma" onchange="cambiarIdioma()" class="barra">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="jp">日本語</option>
+                <option value="de">Deutsch</option>
+            </select>
+         
+          </div>
+          </div>
+          <br>
+          <hr class="dotted">
+          <div class="chip">
+    
+            <h2>Fecha: </h2>
+            <p id="fechaTexto" class="button"></p>
+          
+            <input type="date" id="fecha" class="barra">
+            <button onclick="guardarFecha()" class="button"> Fecha</button>
+          </div>
+            </div>
+        </div>
+    
       </aside>
       <div id="overlay" class="overlay"></div>
       <div class="layout">
@@ -374,63 +416,8 @@
     <div id="toggleArea" class="hidden">
   <p id="meta">Meta (Satoshis):</p>
   --->
-  <!--Pop-Ups-->
+
   
-    <button id="openPopup">Configuration</button>
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-          <span id="closePopup" class="close">&times;</span>
-            <h1 class="config">Configuration</h1>
-           
-            <br>
-            <hr class="dotted">
-            <div class="chip">
-
-              <input type="number" id="metaInput" placeholder="">
-
-  <button onclick="consultarDireccion()">Actualizar Meta</button>
-            </div>
-            <br>
-            
-    <hr class="dotted">
-    <div class="chip">
-        
-        <span style="display: block; margin-bottom: 10px" id="btc">BTC Adress: </span>
-        
-        <input type="text" id="direccionBitcoin" class="barra" placeholder="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">
-        <button id="save" onclick="consultarDireccion()">Guardar</button>
-    
-      </div>
-      <br>
-      <hr class="dotted">
-      
-      <div class="chip">
-        <div style="padding: 0 10px">
-            <span style="display:block; margin-bottom: 10px" id="lang"> Lenguage: </span>
-         <!-- Selector de idioma -->
-          <select id="selector-idioma" onchange="cambiarIdioma()">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="jp">日本語</option>
-        </select>
-     
-      </div>
-      </div>
-      <br>
-      <hr class="dotted">
-      <div class="chip">
-
-        <h2>Fecha: </h2>
-        <p id="fechaTexto"></p>
-      
-        <input type="date" id="fecha">
-        <button onclick="guardarFecha()">Guardar Fecha</button>
-      </div>
-        </div>
-    </div>
-
 <div class="chip">
 
   <p id="metaTexto">Meta (Satoshis):</p>

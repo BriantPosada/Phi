@@ -277,7 +277,7 @@ function actualizarContenido(idioma) {
     var textos = {
         es: {
             home: "Inicio",
-            edit: "Editar",
+            dash: "Metas",
             more: "Más",
             lang: "Idioma",
             title: "Phi - DCA Placenteramente.",
@@ -292,7 +292,7 @@ function actualizarContenido(idioma) {
         },
         en: {
             home: "Home",
-            edit: "Edit",
+            dash:  "Goals",
             more: "More",
             lang: "Language",
             title: "Phi - DCA Pleasurably.",
@@ -307,7 +307,7 @@ function actualizarContenido(idioma) {
         },
         fr: {
             home: "Debut",
-            edit: "Modifier",
+            dash: "Objetifs",
             more: "Plus loin",
             lang: "Langage",
             title: "Phi - DCA Agreablement.",
@@ -322,7 +322,7 @@ function actualizarContenido(idioma) {
         },
         jp: {
           home: "始める",
-          edit: "編集",
+          dash:  "目標",
           more: "さらに遠く",
           lang: "言語",
           title: "Phi - DCA 楽しく.",
@@ -333,13 +333,27 @@ function actualizarContenido(idioma) {
           transacciones: "トランザクション数:",
           last: "最後の 5 トランザクション",
           meta: "目標 (Satoshis)"
+        },
+        de: {
+          home: "Start",
+          dash: "Ziele",
+          more: "Weiter",
+          lang: "Deutsch",
+          title: "Phi - DCA Angenehm.",
+          save: "Halten",
+          btc: "BTC Adresse",
+          head: "Adresse:",
+          balancep: "Gleichgewicht:",
+          transacciones: "Anzahl Transaktionen:",
+          last: "Letzte 5 Transaktionen:",
+          meta: "Ziel (Satoshis):"
         }
         // Añade más idiomas y traducciones aquí
     };
 
     // Actualizar el contenido
     document.getElementById('home').textContent = textos[idioma].home;
-    document.getElementById('edit').textContent = textos[idioma].edit;
+    document.getElementById('dash').textContent = textos[idioma].dash;
     document.getElementById('more').textContent = textos[idioma].more;
     document.getElementById('lang').textContent = textos[idioma].lang;
     document.getElementById('title').textContent = textos[idioma].title;
@@ -349,7 +363,9 @@ function actualizarContenido(idioma) {
     document.getElementById('balancep').textContent = textos[idioma].balancep;
     document.getElementById('transacciones').textContent = textos[idioma].transacciones;
     document.getElementById('last').textContent = textos[idioma].last;
+    /*
     document.getElementById('meta').textContent = textos[idioma].meta
+    */
 }
 
 // Al cargar la página, verificar si hay una selección de idioma guardada

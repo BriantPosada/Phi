@@ -10,6 +10,7 @@ const createWindow = () => {
         width: 1200,
         height: 1000,
 */
+        icon: path.join(__dirname,'/assets/icono.ico'),
         minWidth: 1200, //1200
         minHeight: 900,
         webPreferences: {
@@ -17,7 +18,8 @@ const createWindow = () => {
          contextIsolation:true,
          nodeIntegration: false,
         },
-        icon: `${__dirname}/assets/icono.png`
+        
+
     });
 
     mainWindow.loadFile('./home.html');

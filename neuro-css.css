@@ -242,3 +242,10 @@ hr.dotted {
   font-size: 20px;
   cursor: pointer;
 }
+
+.button {
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0c1e35;
+  border-color: transparent;
+}
